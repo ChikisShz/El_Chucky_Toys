@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Chucky Toys</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.55),
+          rgba(0, 0, 0, 0.55)
+        ),
+        url("hero.jpg") center / cover no-repeat;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    h1 span {
+      color: #7b1e1e; /* rojo vino */
+    }
+
+    .quote {
+      margin-top: 24px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .languages {
+      margin-top: 40px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .languages button {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.6);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .languages button:hover {
+      background: rgba(255,255,255,0.15);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>El <span>Chucky</span> Toys</h1>
+
+    <div class="quote">
+      For people with style.
+    </div>
+
+    <div class="languages">
+      <button>Español</button>
+      <button>English</button>
+    </div>
+  </div>
+</body>
+</html>
