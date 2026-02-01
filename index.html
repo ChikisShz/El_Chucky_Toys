@@ -6,84 +6,94 @@
   <title>El Chucky Toys</title>
 
   <style>
+    :root {
+      --vino: #7b1e1e;
+      --texto: #ffffff;
+    }
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: "Helvetica Neue", Arial, sans-serif;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      min-height: 100vh;
-      background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.55),
-          rgba(0, 0, 0, 0.55)
-        ),
-        url("hero.jpg") center / cover no-repeat;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      height: 100vh;
+      overflow: hidden;
     }
 
-    .container {
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background: 
+        linear-gradient(
+          rgba(0,0,0,0.55),
+          rgba(0,0,0,0.55)
+        ),
+        url("hero.jpg") center / cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--texto);
       padding: 20px;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
       font-weight: 600;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
     }
 
     h1 span {
-      color: #7b1e1e; /* rojo vino */
+      color: var(--vino);
     }
 
     .quote {
-      margin-top: 24px;
+      margin-top: 40px;
       font-size: 1.2rem;
       opacity: 0.9;
     }
 
-    .languages {
-      margin-top: 40px;
+    .idiomas {
+      margin-top: 50px;
       display: flex;
       gap: 20px;
-      justify-content: center;
     }
 
-    .languages button {
+    .idiomas button {
       background: transparent;
-      border: 1px solid rgba(255,255,255,0.6);
-      color: #fff;
+      border: 1px solid rgba(255,255,255,0.4);
+      color: white;
       padding: 10px 22px;
       border-radius: 30px;
       cursor: pointer;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       transition: all 0.3s ease;
     }
 
-    .languages button:hover {
+    .idiomas button:hover {
       background: rgba(255,255,255,0.15);
+      border-color: var(--vino);
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <section class="hero">
     <h1>El <span>Chucky</span> Toys</h1>
 
     <div class="quote">
       For people with style.
     </div>
 
-    <div class="languages">
+    <div class="idiomas">
       <button>Español</button>
       <button>English</button>
     </div>
-  </div>
+  </section>
 </body>
 </html>
